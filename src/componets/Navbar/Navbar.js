@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 import { Typography} from "@mui/material";
 
 export default function Navbar() {
