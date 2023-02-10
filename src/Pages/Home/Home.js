@@ -5,6 +5,7 @@ import {apiGet} from "../../componets/Helpers/config";
 import ShowGrid from "../../componets/Show/ShowGrid";
 import ActorGrid from "../../componets/Actor/ActorGrid";
 
+
 export default function Home() {
     const [input, setInput] = useState('')
     const [results, setResults] = useState(null)
@@ -36,9 +37,9 @@ export default function Home() {
         if (results && results.length > 0) {
             return results[0].show ?
                 (
-                    <ShowGrid/>
+                    <ShowGrid data={results}/>
                 ):(
-                    <ActorGrid/>
+                    <ActorGrid  data={results}/>
                 )
 
         }
@@ -60,7 +61,9 @@ export default function Home() {
                     <Checkbox
                         sx={{
                             color: "grey",
+                            border:"1px solid grey",
                             '&.Mui-checked': {
+                                border:"1px solid green",
                                 color: "green",
                             },
                         }}
@@ -77,7 +80,10 @@ export default function Home() {
                     <Checkbox
                         sx={{
                             color: "grey",
+                            border:"1px solid grey",
                             '&.Mui-checked': {
+                                border:"1px solid green",
+
                                 color: "green",
                             },
                         }}
@@ -90,7 +96,6 @@ export default function Home() {
                 </label>
             </div>
             <Button
-                size={"medium"}
                 variant={"outlined"}
                 onClick={onSearch}
                 onChange={onRadioChange}>
