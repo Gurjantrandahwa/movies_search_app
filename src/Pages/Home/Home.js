@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import "./home.scss";
-import {Button, TextField, Typography} from "@mui/material";
-import {apiGet} from "../../componets/config";
+import {Button, Checkbox, TextField} from "@mui/material";
+import {apiGet} from "../../componets/Helpers/config";
+import ShowGrid from "../../componets/Show/ShowGrid";
+import ActorGrid from "../../componets/Actor/ActorGrid";
 
 export default function Home() {
     const [input, setInput] = useState('')
@@ -13,7 +15,7 @@ export default function Home() {
         setInput(e.target.value)
     }
     const onSearch = () => {
-        apiGet(`/search/shows?q=${input}`)
+        apiGet(`/search/${options}?q=${input}`)
             .then(result => setResults(result))
     }
     const onkeydown = (e) => {
@@ -32,13 +34,13 @@ export default function Home() {
             </div>
         }
         if (results && results.length > 0) {
-            return <div>
-                {results.map((value) => {
-                    return <div key={value.show.id}>
-                        <Typography>{value.show.name}</Typography>
-                    </div>
-                })}
-            </div>
+            return results[0].show ?
+                (
+                    <ShowGrid/>
+                ):(
+                    <ActorGrid/>
+                )
+
         }
         return null;
     }
@@ -52,7 +54,41 @@ export default function Home() {
                 onChange={onChange}
                 size={"small"}
             />
+            <div className={"radios"}>
+                <label htmlFor={"shows-search"}>
 
+                    <Checkbox
+                        sx={{
+                            color: "grey",
+                            '&.Mui-checked': {
+                                color: "green",
+                            },
+                        }}
+                        id={"shows-search"}
+                        type={"radio"}
+                        checked={isShowSearch}
+                        onChange={onRadioChange}
+                        value={"shows"}/>
+                    Shows
+                </label>
+
+                <label htmlFor={"actors-search"}>
+
+                    <Checkbox
+                        sx={{
+                            color: "grey",
+                            '&.Mui-checked': {
+                                color: "green",
+                            },
+                        }}
+                        id={"actors-search"}
+                        type={"radio"}
+                        value={"people"}
+                        checked={!isShowSearch}
+                        onChange={onRadioChange}/>
+                    Actors
+                </label>
+            </div>
             <Button
                 size={"medium"}
                 variant={"outlined"}
@@ -60,30 +96,8 @@ export default function Home() {
                 onChange={onRadioChange}>
                 Search
             </Button>
-            <div>
-                <label htmlFor={"shows-search"}>
-                    Shows
-                    <input
-                        id={"shows-search"}
-                        type={"radio"}
-                        checked={isShowSearch}
-                        onChange={onRadioChange}
-                        value={"shows"}/>
 
-                </label>
-
-                <label htmlFor={"actors-search"}>
-                    Actors
-                    <input
-                        id={"actors-search"}
-                        type={"radio"}
-                        value={"people"}
-                        checked={!isShowSearch}
-                        onChange={onRadioChange}/>
-                </label>
-            </div>
         </div>
-
 
         {displayResults()}
     </div>
