@@ -4,6 +4,7 @@ import {Button, Checkbox, TextField} from "@mui/material";
 import {apiGet} from "../../componets/Helpers/config";
 import ShowGrid from "../../componets/Show/ShowGrid";
 import ActorGrid from "../../componets/Actor/ActorGrid";
+import Navbar from "../../componets/Navbar/Navbar";
 
 
 export default function Home() {
@@ -27,7 +28,6 @@ export default function Home() {
     const onRadioChange = (e) => {
         setOptions(e.target.value)
     }
-    console.log(results)
     const displayResults = () => {
         if (results && results.length === 0) {
             return <div>
@@ -46,6 +46,7 @@ export default function Home() {
         return null;
     }
     return <div className={"home"}>
+        <Navbar/>
         <div>
             <TextField
                 type={"text"}
