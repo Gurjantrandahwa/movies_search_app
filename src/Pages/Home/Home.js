@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import "./home.scss";
-import {Button, Checkbox, TextField} from "@mui/material";
+import {Button, Checkbox, TextField, Typography} from "@mui/material";
 import {apiGet} from "../../componets/Helpers/config";
 import ShowGrid from "../../componets/Show/ShowGrid";
 import ActorGrid from "../../componets/Actor/ActorGrid";
-import Navbar from "../../componets/Navbar/Navbar";
+
 
 
 export default function Home() {
@@ -46,12 +46,17 @@ export default function Home() {
         return null;
     }
     return <div className={"home"}>
-        <Navbar/>
+
+        <Typography variant={"h4"}>
+            Box Office
+        </Typography>
+        <Typography variant={"subtitle1"}>
+            Are You looking for a movie or an actor ?
+        </Typography>
         <div>
             <TextField
-                sx={{
-                    backgroundColor:"white"
-                }}
+                variant={"outlined"}
+               className={"search-bar"}
                 type={"text"}
                 placeholder={"Search Here..."}
                 value={input}
@@ -66,7 +71,7 @@ export default function Home() {
                         sx={{
                             color: "grey",
                             '&.Mui-checked': {
-                                color: "green",
+                                color: "#01f556",
                             },
                         }}
                         id={"shows-search"}
@@ -83,7 +88,7 @@ export default function Home() {
                         sx={{
                             color: "grey",
                             '&.Mui-checked': {
-                                color: "green",
+                                color: "#01f556",
                             },
                         }}
                         id={"actors-search"}
@@ -93,13 +98,13 @@ export default function Home() {
                         onChange={onRadioChange}/>
                     Actors
                 </label>
+                <Button
+                    onClick={onSearch}
+                    onChange={onRadioChange}>
+                    Search
+                </Button>
             </div>
-            <Button
-                variant={"outlined"}
-                onClick={onSearch}
-                onChange={onRadioChange}>
-                Search
-            </Button>
+
 
         </div>
 

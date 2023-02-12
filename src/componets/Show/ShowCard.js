@@ -11,16 +11,14 @@ export default function ShowCard({id, image, name, summary}) {
             <img src={image} alt={name}/>
         </div>
 
-        <Typography variant={"h4"}>
+        <Typography variant={"h5"}>
             {name}
         </Typography>
         <Typography variant={"body2"} color={"gray"}>{summaryText}</Typography>
 
-        <div>
+        <div className={"buttons"}>
             <Link to={`/show/${id}`}>Read More</Link>
-            <Button
-                variant={"outlined"}
-            >
+            <Button>
                 Star Me
             </Button>
         </div>

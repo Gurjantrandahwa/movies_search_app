@@ -1,15 +1,26 @@
-.navbar{
-    display: flex;
-    margin: 30px auto;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.navbar {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 20px;
 
-ul{
+
+  .nav-links {
     display: flex;
-    gap:20px;
-    list-style: none;
-}
+
+    gap: 20px;
+
+
+    a {
+      color: #01f556;
+      font-size: 20px;
+      border: 1px solid #01f556;
+      padding: 3px 20px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+  }
 
 }

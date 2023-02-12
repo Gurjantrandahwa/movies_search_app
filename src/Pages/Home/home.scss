@@ -2,20 +2,57 @@
 
   display: flex;
   justify-content: center;
-  margin: 30px auto;
-
+  margin: auto;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  h6 {
+    color: lightgrey;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    background: white;
+    outline: none !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    border-radius: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
 
   .radios {
     display: flex;
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-
+justify-content: center;
     input {
       margin-left: 10px;
       align-items: center;
     }
+  }
+  button{
+    background: #aa02e3;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    border: none;
+padding: 5px 15px!important;
   }
 }
