@@ -49,6 +49,9 @@ export default function Home() {
         <Navbar/>
         <div>
             <TextField
+                sx={{
+                    backgroundColor:"white"
+                }}
                 type={"text"}
                 placeholder={"Search Here..."}
                 value={input}
@@ -62,9 +65,7 @@ export default function Home() {
                     <Checkbox
                         sx={{
                             color: "grey",
-                            border:"1px solid grey",
                             '&.Mui-checked': {
-                                border:"1px solid green",
                                 color: "green",
                             },
                         }}
@@ -81,10 +82,7 @@ export default function Home() {
                     <Checkbox
                         sx={{
                             color: "grey",
-                            border:"1px solid grey",
                             '&.Mui-checked': {
-                                border:"1px solid green",
-
                                 color: "green",
                             },
                         }}
