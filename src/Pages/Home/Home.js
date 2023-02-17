@@ -99,6 +99,7 @@ export default function Home() {
                     Actors
                 </label>
                 <Button
+                    variant={"outlined"}
                     onClick={onSearch}
                     onChange={onRadioChange}>
                     Search

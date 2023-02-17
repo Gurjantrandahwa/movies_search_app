@@ -1,5 +1,4 @@
 .home {
-
   display: flex;
   justify-content: center;
   margin: auto;
@@ -38,21 +37,30 @@
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-justify-content: center;
+    justify-content: center;
+
     input {
       margin-left: 10px;
       align-items: center;
     }
   }
-  button{
-    background: #aa02e3;
-    color: white;
-    font-weight: 600;
+
+  button {
+    background: transparent;
+    border: 1px solid #01f556;
+    color: #01f556;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     text-transform: none;
     font-size: 18px;
-    border: none;
-padding: 5px 15px!important;
+    padding: 5px 15px !important;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: #01f556;
+      color: black;
+      border: none;
+    }
   }
 }
