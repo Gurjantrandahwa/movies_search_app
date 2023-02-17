@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../Images/img.png"
 
 export default function Seasons({seasons}) {
     return <div>
@@ -17,12 +18,12 @@ export default function Seasons({seasons}) {
                         </p>
                     </div>
                     <div>
-                        <img
-                            src={season.image.original ? season.image.original : "not found"}
-                            width={100}
-                            height={100}
-                            alt={""}
-                        />
+                        {/*<img*/}
+                        {/*    src={season.image.original ? season.image.original : img}*/}
+                        {/*    width={100}*/}
+                        {/*    height={100}*/}
+                        {/*    alt={""}*/}
+                        {/*/>*/}
                     </div>
                     <div>
                         Aired: {' '}
