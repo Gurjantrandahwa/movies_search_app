@@ -1,14 +1,20 @@
 import React from "react";
-import img from "../Images/img.png"
+// import img from "../Images/img.png"
+import "./seasons.scss";
+import {Typography} from "@mui/material";
 
 export default function Seasons({seasons}) {
-    return <div>
-        <p>{seasons.length}</p>
-        <p>
+    return <div className={"seasons"}>
+        <Typography variant={"h6"}>
+           Total Seasons : <span className={"length"}>{seasons.length}</span>
+        </Typography>
+        <Typography variant={"h6"}>
             Episodes in total : {' '}
-            {seasons.reduce((acc, season) => acc + season.episodeOrder, 0)}
-        </p>
-        <div>
+       <span className={"length"}>
+           {seasons.reduce((acc, season) => acc + season.episodeOrder, 0)}
+       </span>
+        </Typography>
+        <div className={"single-season"}>
             {seasons.map(season => (
                 <div key={season.id}>
                     <div style={{display: "flex"}}>
@@ -16,14 +22,6 @@ export default function Seasons({seasons}) {
                         <p>
                             Episodes: <span>{season.episodeOrder}</span>
                         </p>
-                    </div>
-                    <div>
-                        {/*<img*/}
-                        {/*    src={season.image.original ? season.image.original : img}*/}
-                        {/*    width={100}*/}
-                        {/*    height={100}*/}
-                        {/*    alt={""}*/}
-                        {/*/>*/}
                     </div>
                     <div>
                         Aired: {' '}

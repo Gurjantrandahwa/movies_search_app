@@ -1,10 +1,16 @@
 import React from "react";
+import "./details.scss";
+import {Typography} from "@mui/material";
+
 export default function Details({ network, status, premiered}) {
-    return<div>
-        <p> Status : {status}</p>
-        <p>
-            Premiered : {premiered} {network ?`On ${network.name}`: null}
-        </p>
+    return<div className={"details"}>
+        <Typography variant={"h6"}>
+            Status : <span className={"status"}>{status}</span>
+        </Typography>
+        <Typography variant={"h6"}>
+            Premiered : <span className={"status"}>{premiered} </span>
+            <span className={"network"}> {network ?`On ${network.name}`: null}</span>
+        </Typography>
 
     </div>
 }

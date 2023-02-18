@@ -1,5 +1,5 @@
 import React from "react";
-import "./show.scss";
+import "../../Pages/Show/show.scss";
 import ShowCard from "./ShowCard";
 import img from "../Images/img.png";
 import {useShows} from "../Helpers/custom-hooks";

@@ -53,15 +53,15 @@ export default function Show() {
     console.log(show, "show")
 
     if (isLoading) {
-        return <div>
-            <CircularProgress color={"error"} size={100}/>
+        return <div className={"loading"}>
+            <CircularProgress color={"error"} size={50}/>
         </div>
     }
     if (error) {
         return <div>Error: {error}</div>
     }
 
-    return <div>
+    return <div className={"show-container"}>
 
         <ShowMainData
             image={show.image}

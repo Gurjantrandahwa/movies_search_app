@@ -1,0 +1,21 @@
+.seasons{
+  display: flex;
+margin: auto;
+  flex-direction: column;
+  h6{
+text-align: center;
+  }
+  .length{
+    color: #01f556;
+  }
+
+  .single-season{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #f1eaea;
+
+      }
+}

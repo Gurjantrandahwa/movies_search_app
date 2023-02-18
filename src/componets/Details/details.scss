@@ -1,0 +1,17 @@
+.details{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+flex-wrap: wrap;
+  h6{
+    color: lightgrey;
+  }
+  .status{
+    color: #01f556;
+  }
+  .network{
+    color: #ffc806;
+    margin-left: 30px;
+  }
+}
