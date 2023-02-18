@@ -1,14 +1,13 @@
 import React, {useState} from "react";
 import "./home.scss";
-import {Button, Checkbox, TextField, Typography} from "@mui/material";
+import {Button, Checkbox, TextField} from "@mui/material";
 import {apiGet} from "../../componets/Helpers/config";
 import ShowGrid from "../../componets/Show/ShowGrid";
 import ActorGrid from "../../componets/Actor/ActorGrid";
-
-
+import {useLastQuery} from "../../componets/Helpers/custom-hooks";
 
 export default function Home() {
-    const [input, setInput] = useState('')
+    const [input, setInput] = useLastQuery()
     const [results, setResults] = useState(null)
     const [options, setOptions] = useState("shows")
     const isShowSearch = options === "shows";
@@ -47,12 +46,7 @@ export default function Home() {
     }
     return <div className={"home"}>
 
-        <Typography variant={"h4"}>
-            Box Office
-        </Typography>
-        <Typography variant={"subtitle1"}>
-            Are You looking for a movie or an actor ?
-        </Typography>
+
         <div>
             <TextField
                 variant={"outlined"}

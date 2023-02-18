@@ -3,7 +3,22 @@
   margin: auto;
   justify-content: center;
   padding: 20px;
+  flex-direction: column;
+  align-items: center;
 
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  h6 {
+    color: lightgrey;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+  }
 
   .nav-links {
     display: flex;

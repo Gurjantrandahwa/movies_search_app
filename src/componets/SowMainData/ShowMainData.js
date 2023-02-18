@@ -1,6 +1,7 @@
 import React from "react";
 import "./ShowData.scss";
 import {Typography} from "@mui/material";
+import {Star} from "../Helpers/style";
 
 export default function ShowMainData({image, name, rating, summary, tags}) {
     return <div className={"show-data"}>
@@ -8,7 +9,7 @@ export default function ShowMainData({image, name, rating, summary, tags}) {
         <div>
             <h1>{name}</h1>
             <div>
-                <div className={"star"}/>
+               <Star/>
                 <span>{rating.average || "N/A"}</span>
             </div>
 
