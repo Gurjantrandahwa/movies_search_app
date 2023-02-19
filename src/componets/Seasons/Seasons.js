@@ -14,18 +14,21 @@ export default function Seasons({seasons}) {
            {seasons.reduce((acc, season) => acc + season.episodeOrder, 0)}
        </span>
         </Typography>
-        <div className={"single-season"}>
+        <div className={"single-season-wrapper"}>
             {seasons.map(season => (
-                <div key={season.id}>
-                    <div style={{display: "flex"}}>
-                        <p>{season.number} : </p>
-                        <p>
-                            Episodes: <span>{season.episodeOrder}</span>
-                        </p>
+                <div key={season.id} className={"single-season"}>
+                    <div>
+                        <Typography variant={"h6"}>Season : <span className={"color-green"}>{season.number}</span></Typography>
+                        <Typography variant={"body1"}>
+                           No. of Episodes : <span className={"color-green"}>{season.episodeOrder}</span>
+                        </Typography>
                     </div>
                     <div>
-                        Aired: {' '}
-                        <span>{season.premiereDate} - {season.endDate}</span>
+                        <Typography variant={"body1"}>
+                            Aired : {' '}
+                            <span className={"color-green"}>{season.premiereDate} - {season.endDate}</span>
+                        </Typography>
+
                     </div>
 
                 </div>

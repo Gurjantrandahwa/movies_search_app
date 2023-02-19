@@ -1,17 +1,23 @@
-.details{
-display: flex;
+.details {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-flex-wrap: wrap;
-  h6{
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+
+  h6 {
     color: lightgrey;
+    align-items: center;
   }
-  .status{
+
+  .status {
     color: #01f556;
   }
-  .network{
+
+  .network {
     color: #ffc806;
     margin-left: 30px;
+    margin-bottom: 2px;
   }
 }

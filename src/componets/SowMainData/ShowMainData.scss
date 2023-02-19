@@ -1,0 +1,56 @@
+.show-data {
+  display: flex;
+  gap: 20px;
+margin: auto;
+  justify-content: center;
+  align-items: flex-start;
+
+  img {
+    max-width: 33%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+
+  .main-text {
+
+h1{
+  color: #01f556;
+  text-transform: uppercase;
+}
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+
+      .tag {
+        color: #01f556;
+        border-radius: 20px;
+        border: 1px solid #01f556;
+        padding: 4px 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .show-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    img{
+width: auto;
+      height: auto;
+    }
+  }
+
+}

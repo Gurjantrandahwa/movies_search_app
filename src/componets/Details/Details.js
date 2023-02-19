@@ -9,7 +9,7 @@ export default function Details({ network, status, premiered}) {
         </Typography>
         <Typography variant={"h6"}>
             Premiered : <span className={"status"}>{premiered} </span>
-            <span className={"network"}> {network ?`On ${network.name}`: null}</span>
+            <span className={"network"}> {network ?`On ${network.name} "Channel"`: null}</span>
         </Typography>
 
     </div>

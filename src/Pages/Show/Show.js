@@ -70,7 +70,7 @@ export default function Show() {
             summary={show.summary}
             tags={show.genres}
         />
-        <div>
+
 
             <h3>Details</h3>
             <Details
@@ -78,7 +78,7 @@ export default function Show() {
                 network={show.network}
                 premiered={show.premiered}
             />
-        </div>
+
         <div>
             <h3>Seasons</h3>
             <Seasons

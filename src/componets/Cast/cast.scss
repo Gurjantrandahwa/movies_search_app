@@ -1,0 +1,21 @@
+.cast-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 30px;
+
+  .single-cast {
+    width: 300px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    gap: 15px;
+
+    img {
+      width: 150px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

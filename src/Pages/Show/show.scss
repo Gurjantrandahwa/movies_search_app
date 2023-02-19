@@ -1,63 +1,69 @@
-.show-container{
-max-width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+.show-container {
+  //max-width: 700px;
+  //  margin: auto;
+  padding: 50px;
 
-}
+  h3 {
+    margin-top: 80px;
+  }
 
-.show-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin: auto;
-
-  .card {
-    width: 350px;
-
-    border-radius: 20px;
+  .show-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
+    margin: auto;
 
-    padding: 10px;
+    .card {
+      width: 350px;
 
-    h5 {
-      font-family: 'Poppins', sans-serif;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      text-align: center;
-    }
-
-    img {
-      width: 300px;
-      height: 400px;
-      object-fit: cover;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      margin: auto;
-      align-items: center;
-      display: flex;
-    }
 
-    .buttons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 20px;
+      padding: 10px;
 
-      button {
-        border-radius: 20px;
-      }
-
-      a {
-        color: #ffc806 !important;
-        border: 1px solid #ffc806;
-        padding: 8px 10px;
-        border-radius: 20px;
+      h5 {
         font-family: 'Poppins', sans-serif;
-        font-weight: 500;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        display: flex;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+          border-radius: 20px;
+        }
+
+        a {
+          color: #ffc806 !important;
+          border: 1px solid #ffc806;
+          padding: 8px 10px;
+          border-radius: 20px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 500;
+        }
       }
     }
+
+  }
+  .color-green {
+    color: #01f556;
   }
 }
