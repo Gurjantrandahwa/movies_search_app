@@ -3,7 +3,7 @@ import img from "../Images/img.png";
 import ActorCard from "./ActorCard";
 
 export default function ActorGrid({data}) {
-    return <div>
+    return <div className={"show-wrapper"}>
         {
             data.map(({person}) => <ActorCard
                 key={person.id}

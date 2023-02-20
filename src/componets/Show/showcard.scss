@@ -4,16 +4,13 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  margin: auto;
+  margin: 40px auto;
 }
 .card {
   width: 350px;
-
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 10px;
 
   h5 {
@@ -31,6 +28,23 @@
     margin: auto;
     align-items: center;
     display: flex;
+    border-radius: 20px;
+  }
+  .action-text{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h6{
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .color-green{
+      color: #01f556;
+    }
   }
 
   .buttons {

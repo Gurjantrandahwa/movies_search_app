@@ -48,8 +48,7 @@ export default function Home() {
 
 
         <div>
-            <TextField
-                variant={"outlined"}
+            <input
                className={"search-bar"}
                 type={"text"}
                 placeholder={"Search Here..."}
@@ -92,15 +91,15 @@ export default function Home() {
                         onChange={onRadioChange}/>
                     Actors
                 </label>
-                <Button
-                    className={"button"}
-                    variant={"contained"}
-                    onClick={onSearch}
-                    onChange={onRadioChange}>
-                    Search
-                </Button>
-            </div>
 
+            </div>
+            <Button
+                className={"button"}
+                variant={"contained"}
+                onClick={onSearch}
+                onChange={onRadioChange}>
+                Search
+            </Button>
 
         </div>
 

@@ -7,19 +7,19 @@
   padding-top: 20px;
 
 
-
-
   .search-bar {
+    display: block;
+    width: 300px;
     background: white;
     outline: none !important;
-    border: none !important;
     font-family: 'Poppins', sans-serif;
-    width: 100%;
-    border-radius: 10px;
-
-    &:focus {
-      outline: none;
-    }
+    border-radius: 12px;
+    margin: auto;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 0 10px 0 rgba(219, 219, 219, 0.5);
+    padding: 13px 15px;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   .radios {
@@ -36,6 +36,7 @@
   }
 
   .button {
+    width: 100%;
     background: #01f556;
     border: none;
     color: #282828;
@@ -44,8 +45,10 @@
     text-decoration: none;
     text-transform: none;
     font-size: 18px;
-    padding: 5px 15px !important;
+    padding: 3px 15px !important;
     border-radius: 20px;
+    justify-content: center;
+    display: flex;
 
     &:hover {
       background-color: #01f556;
