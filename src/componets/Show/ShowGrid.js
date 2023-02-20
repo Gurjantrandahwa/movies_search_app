@@ -3,7 +3,7 @@ import "../../Pages/Show/show.scss";
 import ShowCard from "./ShowCard";
 import img from "../Images/img.png";
 import {useShows} from "../Helpers/custom-hooks";
-
+import "./showcard.scss"
 export default function ShowGrid({data}) {
     const [starredShows, dispatchStarred] = useShows();
 
