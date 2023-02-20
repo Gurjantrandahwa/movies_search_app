@@ -1,11 +1,27 @@
 import React, {useState} from "react";
 import "./home.scss";
-import {Button, Checkbox, TextField} from "@mui/material";
+import {Button, Checkbox} from "@mui/material";
 import {apiGet} from "../../componets/Helpers/config";
 import ShowGrid from "../../componets/Show/ShowGrid";
 import ActorGrid from "../../componets/Actor/ActorGrid";
 import {useLastQuery} from "../../componets/Helpers/custom-hooks";
+const displayResults = (results) => {
+    if (results && results.length === 0) {
+        return <div>
+            No Results found
+        </div>
+    }
+    if (results && results.length > 0) {
+        return results[0].show ?
+            (
+                <ShowGrid data={results}/>
+            ):(
+                <ActorGrid  data={results}/>
+            )
 
+    }
+    return null;
+}
 export default function Home() {
     const [input, setInput] = useLastQuery()
     const [results, setResults] = useState(null)
@@ -27,23 +43,7 @@ export default function Home() {
     const onRadioChange = (e) => {
         setOptions(e.target.value)
     }
-    const displayResults = () => {
-        if (results && results.length === 0) {
-            return <div>
-                No Results found
-            </div>
-        }
-        if (results && results.length > 0) {
-            return results[0].show ?
-                (
-                    <ShowGrid data={results}/>
-                ):(
-                    <ActorGrid  data={results}/>
-                )
 
-        }
-        return null;
-    }
     return <div className={"home"}>
 
 
@@ -103,6 +103,6 @@ export default function Home() {
 
         </div>
 
-        {displayResults()}
+        {displayResults(results)}
     </div>
 }

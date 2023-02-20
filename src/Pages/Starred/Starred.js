@@ -31,8 +31,8 @@ export default function Starred() {
     console.log(shows)
     return <div>
         {
-            loading && <div>
-                <CircularProgress color={"error"} size={200}/>
+            loading && <div className={"loading"}>
+                <CircularProgress color={"error"} size={80}/>
             </div>
 
         }

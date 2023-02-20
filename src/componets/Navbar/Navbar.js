@@ -1,11 +1,11 @@
-import React from "react";
+import React, {memo} from "react";
 import "./Navbar.scss";
 import {Link} from "react-router-dom";
 import {Typography} from "@mui/material";
 
-export default function Navbar() {
+ function Navbar() {
 
-
+console.log("render")
     return <div className={"navbar"}>
         <div>
             <Typography variant={"h4"}>
@@ -23,3 +23,4 @@ export default function Navbar() {
 
     </div>
 }
+export default memo(Navbar)
