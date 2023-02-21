@@ -29,7 +29,7 @@ export default function Show() {
             tags={show.genres}
         />
 
-        <h3>Details</h3>
+
         <Details
             status={show.status}
             network={show.network}
@@ -37,13 +37,13 @@ export default function Show() {
         />
 
         <div>
-            <h3>Seasons</h3>
+
             <Seasons
                 seasons={show._embedded.seasons}
             />
         </div>
         <div>
-            <h3>Cast</h3>
+
             <Cast
                 cast={show._embedded.cast}
             />

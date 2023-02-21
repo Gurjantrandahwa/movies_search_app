@@ -5,6 +5,7 @@ import {Typography} from "@mui/material";
 
 export default function Seasons({seasons}) {
     return <div className={"seasons"}>
+        <h3>Seasons</h3>
         <Typography variant={"h6"}>
            Total Seasons : <span className={"length"}>{seasons.length}</span>
         </Typography>

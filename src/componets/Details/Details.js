@@ -4,6 +4,7 @@ import {Typography} from "@mui/material";
 
 export default function Details({ network, status, premiered}) {
     return<div className={"details"}>
+        <h3>Details</h3>
         <Typography variant={"h6"}>
             Status : <span className={"status"}>{status}</span>
         </Typography>

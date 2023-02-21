@@ -3,6 +3,8 @@ import "./cast.scss";
 
 export default function Cast({cast}) {
     return <div className={"cast-wrapper"}>
+
+        <h3>Cast</h3>
         {
             cast.map(({person, character, voice}, index) => {
                 return <div key={index} className={"single-cast"}>
